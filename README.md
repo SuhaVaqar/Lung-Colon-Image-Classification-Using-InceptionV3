@@ -15,7 +15,6 @@ The **Lung Colon Image Dataset** consists of three categories:
 - **Lung Squamous Cell Carcinoma**
 - **Colon Adenocarcinoma**
 
-The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images).
 
 ---
 
