@@ -1,10 +1,31 @@
-# Lung-Colon-Image-Classification-Using-InceptionV3
+# Lung Colon Image Classification Using InceptionV3
 
-This project uses transfer learning with the InceptionV3 model to classify lung and colon images. The dataset used is the Lung Colon Image Dataset, which contains three categories of medical images. The model is built using TensorFlow and Keras.
+A deep learning project that uses transfer learning with **InceptionV3** to classify lung and colon cancer histopathological images into three categories. This project is built using **TensorFlow** and **Keras**.
 
-Dataset
-The dataset contains medical images from three categories:
+## Overview
 
-# Lung Adenocarcinoma
-# Lung Squamous Cell Carcinoma
-# Colon Adenocarcinoma
+This project focuses on using a pre-trained **InceptionV3** model for image classification to identify lung and colon cancer types from medical histopathological images. The model is fine-tuned for this specific task and achieves high accuracy through transfer learning.
+
+---
+
+## Dataset
+
+The **Lung Colon Image Dataset** consists of three categories:
+- **Lung Adenocarcinoma**
+- **Lung Squamous Cell Carcinoma**
+- **Colon Adenocarcinoma**
+
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images).
+
+---
+
+### Prerequisites
+
+Make sure you have the following installed:
+- Python 3.x
+- TensorFlow
+- Keras
+- OpenCV
+- NumPy, Pandas, Matplotlib
+
+
