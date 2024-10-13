@@ -5,6 +5,6 @@ This project uses transfer learning with the InceptionV3 model to classify lung 
 Dataset
 The dataset contains medical images from three categories:
 
-Lung Adenocarcinoma
-Lung Squamous Cell Carcinoma
-Colon Adenocarcinoma
+# Lung Adenocarcinoma
+# Lung Squamous Cell Carcinoma
+# Colon Adenocarcinoma
