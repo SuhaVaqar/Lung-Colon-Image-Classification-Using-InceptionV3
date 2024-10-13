@@ -26,5 +26,56 @@ Make sure you have the following installed:
 - Keras
 - OpenCV
 - NumPy, Pandas, Matplotlib
+  
+## Model Architecture
+
+We use **InceptionV3**, a pre-trained model on the **ImageNet** dataset, and fine-tune it for our three-class image classification task. The model architecture includes:
+
+- **Input Layer**: Resized images to 256x256 pixels.
+- **Base Model**: InceptionV3 without the top layers (pre-trained on ImageNet).
+- **Flattening Layer**: To flatten the output from the base model.
+- **Fully Connected Layers**:
+  - Dense layer with 256 units, **ReLU** activation, and **Batch Normalization**.
+  - Dense layer with 128 units, **ReLU** activation, and **Dropout** (0.3).
+- **Output Layer**: Softmax layer for multi-class classification (three categories).
+
+### Model Summary:
+
+- **Input shape**: (256, 256, 3)
+- **Optimizer**: Adam
+- **Loss function**: Categorical Crossentropy
+- **Metrics**: Accuracy
+
+---
+
+## Training and Evaluation
+
+The model is trained using the following configuration:
+
+- **Image Size**: 256x256 pixels
+- **Training/Validation Split**: 80% training, 20% validation
+- **Batch Size**: 64
+- **Epochs**: 10 (with early stopping)
+- **Callbacks**: 
+  - Early stopping 
+  - ReduceLROnPlateau 
+  - Custom callback to stop training when validation accuracy exceeds 90%
+
+### Training Visualization:
+- Training is visualized using **accuracy** and **loss plots**.
+
+### Validation Performance:
+- Validation performance is evaluated using:
+  - **Confusion Matrix**
+  - **Classification Report** (Precision, Recall, F1-Score)
+
+---
+
+## Results
+
+After training, the model achieved a validation accuracy of over 90%. Below are the key results:
+
+- **Confusion Matrix**: Displays the number of correct and incorrect predictions.
+- **Classification Report**: Shows **precision**, **recall**, and **F1-score** for each category (Lung Adenocarcinoma, Lung Squamous Cell Carcinoma, Colon Adenocarcinoma).
 
 
